@@ -4,3 +4,5 @@ tasks.db
 *.db-shm
 .venv/
 __pycache__/
+.idea/
+.vscode/
