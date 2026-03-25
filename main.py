@@ -1,6 +1,5 @@
-from fastapi import FastAPI, Depends
-from typing import Annotated
-from classmd.class_basemd import Task, TaskAdd
+from fastapi import FastAPI
+from classmd.class_basemd import TaskAdd
 from contextlib import asynccontextmanager
 from database.database import create_table
 from repo import TaskRepo
