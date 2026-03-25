@@ -6,3 +6,5 @@ tasks.db
 __pycache__/
 .idea/
 .vscode/
+.env
+.ruff_cache
