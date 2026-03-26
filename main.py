@@ -1,14 +1,16 @@
 from fastapi import FastAPI
 from classmd.class_basemd import TaskAdd
 from contextlib import asynccontextmanager
-from database.database import create_table
 from repo import TaskRepo
+from database.database import engine, Base
+from database.models import TaskORM
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await create_table()
-    print('База готова к работе')
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
     yield
-    print('Выключение')
+    await engine.dispose()
 
 app = FastAPI(lifespan=lifespan)
 

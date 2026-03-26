@@ -1,4 +1,5 @@
-from database.database import new_session, TaskORM
+from database.database import new_session
+from database.models import TaskORM
 from classmd.class_basemd import TaskAdd
 from sqlalchemy import select, delete, update
 
