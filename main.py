@@ -3,7 +3,6 @@ from classmd.class_basemd import TaskAdd
 from contextlib import asynccontextmanager
 from repo import TaskRepo
 from database.database import engine, Base
-from database.models import TaskORM
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
