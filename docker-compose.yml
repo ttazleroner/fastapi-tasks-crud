@@ -41,6 +41,7 @@ services:
         condition: service_healthy
     networks:
       - app_network
+      #опциональный слой проксирования, так же пробую DevOps
   proxy:
     image: nginx:alpine
     ports:
