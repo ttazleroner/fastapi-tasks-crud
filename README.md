@@ -8,7 +8,7 @@ stack
 - FastAPI
 - Uvicorn
 - SQLAlchemy 2.x (async)
-- SQLite (aiosqlite)
+- PostgreSQL
 
 Features
 - создание задачи
@@ -41,5 +41,4 @@ bash
 
 uvicorn main:app --reload
 notes
-база SQLite создаётся автоматически при старте (tasks.db).
-если поменял схему таблицы и словил ошибки по колонкам — просто удали tasks.db и перезапусти.
+база PostgreSQL создаётся автоматически при стартею
